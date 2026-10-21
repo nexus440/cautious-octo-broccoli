@@ -1,0 +1,106 @@
+@import '../../styles/tokens.scss';
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.card {
+  border-radius: 16px;
+  border: 1px solid $slate-200;
+  background: $white;
+  padding: 16px;
+  box-shadow: $shadow;
+}
+
+.cardRisk {
+  border-color: $rose-200;
+  background: $rose-50;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: $slate-500;
+}
+
+.labelRisk {
+  color: $rose-700;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+}
+
+.icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.value {
+  margin: 8px 0 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.sub {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: $slate-500;
+}
+
+.up {
+  color: #059669;
+  font-weight: 600;
+}
+
+.down {
+  color: $rose;
+  font-weight: 600;
+}
+
+.muted {
+  font-size: 18px;
+  font-weight: 600;
+  color: $slate-400;
+}
+
+.pulse {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: $rose;
+  margin-right: 6px;
+  box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.6);
+  animation: ping 1.8s infinite;
+}
+
+@keyframes ping {
+  0% {
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.55);
+  }
+  80%,
+  100% {
+    box-shadow: 0 0 0 8px rgba(225, 29, 72, 0);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

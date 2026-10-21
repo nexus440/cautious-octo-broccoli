@@ -1,0 +1,44 @@
+@import '../../styles/tokens.scss';
+
+.empty {
+  border-radius: 16px;
+  border: 2px dashed $slate-200;
+  background: $white;
+  padding: 64px 16px;
+  text-align: center;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  display: grid;
+  place-items: center;
+  border-radius: 9999px;
+  background: $slate-100;
+  color: $slate-400;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sub {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: $slate-500;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}

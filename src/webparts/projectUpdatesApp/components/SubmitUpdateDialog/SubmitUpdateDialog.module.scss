@@ -1,0 +1,104 @@
+@import '../../styles/tokens.scss';
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.row3,
+.row2 {
+  display: grid;
+  gap: 16px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.cards3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.label {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: $slate-600;
+}
+
+.cardBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 12px;
+  border: 1px solid $slate-200;
+  background: $white;
+  padding: 12px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: $slate-600;
+  cursor: pointer;
+}
+
+.cardBtn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.seg {
+  border-radius: 8px;
+  border: 1px solid $slate-200;
+  background: $white;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: $slate-600;
+  cursor: pointer;
+}
+
+.sevWrap {
+  border-radius: 12px;
+  border: 1px solid $rose-200;
+  background: $rose-50;
+  padding: 12px;
+}
+
+.sevLabel {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: $rose-900;
+}
+
+.char {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: $slate-400;
+}
+
+.labelRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+@media (min-width: 640px) {
+  .row3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .row2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
