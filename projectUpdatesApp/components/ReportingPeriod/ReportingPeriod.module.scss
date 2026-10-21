@@ -1,0 +1,79 @@
+@import '../../styles/tokens.scss';
+
+.wrap {
+  border-radius: 16px;
+  border: 1px solid $slate-200;
+  background: $white;
+  padding: 12px;
+  box-shadow: $shadow;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: $slate-500;
+}
+
+.caption svg {
+  width: 16px;
+  height: 16px;
+}
+
+.rangeLabel {
+  margin-left: auto;
+  font-weight: 500;
+  color: $slate-400;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.presets {
+  display: flex;
+  overflow-x: auto;
+  border-radius: 12px;
+  background: $slate-100;
+  padding: 4px;
+}
+
+.preset {
+  white-space: nowrap;
+  border: 0;
+  background: transparent;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $slate-500;
+  cursor: pointer;
+}
+
+.presetActive {
+  background: $white;
+  color: $indigo-700;
+  box-shadow: $shadow;
+}
+
+.dates {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow {
+  color: $slate-400;
+}
+
+@media (min-width: 640px) {
+  .row {
+    flex-direction: row;
+    align-items: center;
+  }
+}

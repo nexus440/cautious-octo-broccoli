@@ -1,0 +1,67 @@
+@import './styles/tokens.scss';
+
+.root {
+  font-family: 'Segoe UI', Inter, ui-sans-serif, system-ui, sans-serif;
+  color: $slate-800;
+  background: $page;
+  min-height: 100%;
+  margin: -1px;
+}
+
+.page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 16px 32px;
+}
+
+.titleRow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.heading {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.lede {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: $slate-500;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.status {
+  padding: 24px 16px;
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding: 32px 24px 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .titleRow {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+}

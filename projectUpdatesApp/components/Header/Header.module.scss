@@ -1,0 +1,73 @@
+@import '../../styles/tokens.scss';
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid $slate-200;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: $slate-800;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: $indigo;
+  color: $white;
+}
+
+.logo svg {
+  width: 20px;
+  height: 20px;
+}
+
+.title {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  display: none;
+  font-size: 11px;
+  color: $slate-500;
+}
+
+.actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 640px) {
+  .inner {
+    padding: 0 24px;
+  }
+
+  .sub {
+    display: block;
+  }
+}
